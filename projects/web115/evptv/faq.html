@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Frequently Asked Questions | EVPtv. Ever Upward.</title>
+		<link rel="shortcut icon" href="evptvfavi.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/normalize.css">	
+		<link rel="stylesheet" href="styles/content.css">
+		<link rel="stylesheet" href="styles/slicknav.css">
+
+		<script src="https://use.fontawesome.com/d48847fa87.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
+	
+<!-- Slick Nav Menu -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+	
+<!-- Current Date -->
+	<script type="text/javascript">
+		tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+		function GetClock(){
+		d=new Date();
+		var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+		if(nyear<1000) nyear+=1900;
+		var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+		if(nhour==0){ap=" AM";nhour=12;}
+		else if(nhour<12){ap=" AM";}
+		else if(nhour==12){ap=" PM";}
+		else if(nhour>12){ap=" PM";nhour-=12;}
+
+		if(nmin<=9) nmin="0"+nmin;
+		if(nsec<=9) nsec="0"+nsec;
+
+		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+		}
+
+		window.onload=function(){
+		GetClock();
+		setInterval(GetClock,1000);
+		}
+	</script>
+
+	</head>
+
+	<body>
+
+		<header>
+		<a href="index.html"><img src="images/EVPtvLogoTransparentMini_50.png" alt="EVPtv Logo" style="float:left"></a>
+		<nav id="mobile_menu"></nav>
+		<nav id="nav_menu">
+			<ul>
+				<li><a class="slidinglink" href="index.html" class="current">Home</a></li>
+				<li><a class="slidinglink" href="http://excelsiorproductions.proboards.com" target="_blank">Forum</a></li>
+				<li><a class="slidinglink" href="shows.html">Shows</a></li>
+				<li><a class="slidinglink" href="about.html">About Us</a>
+    		<ul>
+    			<li><a class="slidinglink" href="faq.html">FAQ</a></li>
+    			<li><a class="slidinglink" href="affiliates.html">Affiliates</a></li>
+    			<li><a class="slidinglink" href="contact.html">Contact</a></li>
+    		</ul>
+			</li>
+			</ul>	
+		</nav>
+		</header>
+  
+  
+
+		<aside style="float:left;">
+			<div class="news">
+				<b2>HELPFUL RESOURCES</b2>
+				<hr>
+				<a href="http://screenandscripts.tumblr.com/post/79270077905/hello-found-you-via-your-promo-on" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; intro to screenwriting </a><br><br>
+				<a href="http://www.simplyscripts.com/WR_glossary.html" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; screenwriting terminology</a><br><br>
+				<a href="http://screenandscripts.tumblr.com/post/82482752271/vo-vs-os-vs-oc" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; voiceover vs. off-camera vs. off-screen </a><br><br>
+				<a href="http://screenandscripts.tumblr.com/post/82472157814/montage-vs-series-of-shots" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; montage vs. series of shots</a><br><br>
+					<a href="http://writeworld.tumblr.com/post/38865619233/a-few-tips-and-resources-for-writing-characters-of" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; writing characters of color </a><br><br>
+				<a href="http://www.superheronation.com/2011/08/27/red-flags-for-female-characters-written-by-men/" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; red flags for female characters written by men</a><br><br>
+				<a href="http://impishidea.com/writing/how-not-to-write-female-characters" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; how not to write female characters </a><br><br>
+				<a href="http://creativewritingguild.com/tips-tricks/5-guidelines-writing-strong-female-character/" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; writing strong female characters</a><br><br>
+				<a href="http://writeonsisters.com/writing-craft/how-to-write-lgbt-characters/" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; writing lgbt characters</a><br><br>	
+				<a href="http://fuckyeahcharacterdevelopment.tumblr.com/post/40135230984/writing-the-lgbt-community" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; writing the lgbt+ community</a><br><br><br>				
+				<b2>SCREENWRITING SOFTWARE</b2>
+				<hr>
+				<a href="https://www.finaldraft.com/" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; final draft </a><br><br>
+				<a href="http://www.trelby.org/" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; trelby</a><br><br>
+				<a href="https://www.celtx.com/index.html" target="_blank"><span class="fa fa-external-link" style="color: #fff; text-shadow: 0 0 1px #fff;"></span>&nbsp;&nbsp; celtx </a>
+			</div>
+		</aside>
+
+		<main>	
+			<section>
+
+    	<h2>What is a virtual network?</h2>
+		<hr>
+		<p>A virtual network is a website, forum or a combination of both that hosts and promotes virtual series and operates as an actual television network does. You pitch a series to the network (you can find our guidelines <a href="http://excelsiorproductions.proboards.com/thread/215/information-desk-pitching-guidelines" target="_blank">here</a>) and it's either greenlit <em>or</em> you'll receive timely feedback in order to shape your series up to be picked up by the network. Shows are renewed on a seasonal basis, etc.</p>
+		<br>
+		
+    	<h2>What is a virtual series?</h2>
+		<hr>
+		<p>A virtual series is orginal or fan fiction written in as thought it were being filmed for television instead written like a novel (in other words, screenplay instead of prose). </p>
+		<ul2>
+			<li><span class="fa fa-chevron-right"></span>&nbsp; They can be written solo or as a team.</li>
+			<li><span class="fa fa-chevron-right"></span>&nbsp; On average, they have 6 to 24 episodes in a single season.</li>
+			<li><span class="fa fa-chevron-right"></span>&nbsp; Typical episode length for a half-hour series: 22-30 pages.</li>
+			<li><span class="fa fa-chevron-right"></span>&nbsp; Typical episode length for an hour long series: 50-60 pages.</li>
+			<li><span class="fa fa-chevron-right"></span>&nbsp; Webisodes typically have 6-12 episodes per sequence that range from 10-15 pages in length.</li>
+		</ul2>
+		<p>Like a real television series, your episodes are expected to "air" weekly. The network and readers aren't fond of long waits between episodes, so we require that you have a good portion of your episodes written prior to premiering your series.</p>
+		<br>
+		
+    	<h2>Do you do movies/mini-series?</h2>
+		<hr>
+		<p>Absolutely! Our pitching/greenlighting guidelines vary a little between the different mediums, but we'll allow all of them. If you have an idea, just check out the information desk threads on our forums related to the content you want to pitch to us. If you have any questions, contact us via our contact page <em>or</em> send us a message on the forum!</p>
+		<br>
+		
+    	<h2>What if I already have a series and want to host it on EVPtv?</h2>
+		<hr>
+		<p>If you've already written a series elsewhere and want to promote it through and air it on EVPtv, contact one of the network executives on the forums. We can discuss the options (will you need to pitch to us, will we bypass the process, etc.) and go from there.</p>
+		<br>
+
+    	<h2>Can I work on a series that's already airing?</h2>
+		<hr>
+		<p>Of course! But only if the showrunner wants you to. All showrunners have total creative control over their series and their crew, so they call all the shots. We won't force a showruller to do anything they don't want to do with their own crew.</p>
+		<p>If there's a specific series you're interested in writing for, we suggest approaching the showrunner directly and (kindly!) asking if they need help. If you don't mind what project you're working on and just want the hands-on experience of working on a virtual series without the stress of running your own, check out the "looking for crew" section on the forums to see if there are any openings.</p>
+		<br>
+		</main>
+
+		<footer>
+			<div id="clockbox"></div>
+			<hr>
+			<p>&copy; Excelsior Virtual Productions (EVPtv) 2013-2017.<br>
+			All virtual shows and movies on EVPtv are completely fan-made. The likeness of actors/actresses represented are used for the reader's visualization of the characters portrayed in our scripts. <br><br><b>No profit is being made. No copyright infringement intended.</b> <br>All original characters and plots are the property of the show's writer/creator. <br>All publicly recognizable characters, stories, etc. are copyright of their respective owners. EVPtv is in no way associated with the owners of any copyrighted material. </p>
+		</footer>
+	</body>
+</html>

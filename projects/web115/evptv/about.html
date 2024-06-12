@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About Us | EVPtv. Ever Upward.</title>
+		<link rel="shortcut icon" href="evptvfavi.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/normalize.css">	
+		<link rel="stylesheet" href="styles/content.css">
+		<link rel="stylesheet" href="styles/slicknav.css">
+
+		<script src="https://use.fontawesome.com/d48847fa87.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
+	
+<!-- Slick Nav Menu -->
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+
+<!-- Current Date -->
+	<script type="text/javascript">
+		tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+		function GetClock(){
+		d=new Date();
+		var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+		if(nyear<1000) nyear+=1900;
+		var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+		if(nhour==0){ap=" AM";nhour=12;}
+		else if(nhour<12){ap=" AM";}
+		else if(nhour==12){ap=" PM";}
+		else if(nhour>12){ap=" PM";nhour-=12;}
+
+		if(nmin<=9) nmin="0"+nmin;
+		if(nsec<=9) nsec="0"+nsec;
+
+		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+		}
+
+		window.onload=function(){
+		GetClock();
+		setInterval(GetClock,1000);
+		}
+	</script>
+	
+	</head>
+
+	<body>
+
+		<header>
+		<a href="index.html"><img src="images/EVPtvLogoTransparentMini_50.png" alt="EVPtv Logo" style="float:left"></a>
+		<nav id="mobile_menu"></nav>
+		<nav id="nav_menu">
+			<ul>
+				<li><a class="slidinglink" href="index.html" class="current">Home</a></li>
+				<li><a class="slidinglink" href="http://excelsiorproductions.proboards.com" target="_blank">Forum</a></li>
+				<li><a class="slidinglink" href="shows.html">Shows</a></li>
+				<li><a class="slidinglink" href="about.html">About Us</a>
+    		<ul>
+    			<li><a class="slidinglink" href="faq.html">FAQ</a></li>
+    			<li><a class="slidinglink" href="affiliates.html">Affiliates</a></li>
+    			<li><a class="slidinglink" href="contact.html">Contact</a></li>
+    		</ul>
+			</li>
+			</ul>	
+		</nav>
+		</header>
+  
+  
+
+		<aside style="float:left;">
+			<div class="news">
+				<b2>EVPTV STAFF</b2>
+				<hr><br>
+				<b3>JARIN Y.</b3>
+				<p>Chief Executive.</p>
+				<br>
+				<b3>MJ C.</b3>
+				<p>Vice Executive.</p>
+				<br>
+				<b3>RACHEL M.</b3>
+				<p>Co-Vice Executive.</p>
+				<br>
+				<b3>MADDIE F.</b3>
+				<p>Network Executive.</p>
+				<br>
+				<b3>DJ K.</b3>
+				<p>Network Director.</p>
+				<br>
+				<b3>KERRY B.</b3>
+				<p>Network Directer.</p>
+				<br>
+			</div>
+		</aside>
+
+		<main>	
+			<section>
+
+    	<h1>Our Mission Statement</h1>
+		<hr>
+		<p>Here at EVPtv we strive to produce some of the highest quality virtual series available, to offer a platform for writers to showcase their works with the intention to entertain, and to help writers grow and harness their talents whilst we do the same ourselves. As writers we know how important it is to constantly better yourself and improve your craft, so we aim to provide constructive criticism and encouragement to beginner writers, veterans, and everyone in between.&nbsp;</p>
+		
+		<p>You might ask what sets us apart from the other virtual series networks; what makes us <em>different</em>? In the film and television industries women are heavily outnumbered by men all across the board, from creators and executive producers to writers and directors. A visual representation of this is found on the chart below, featured in Diana Mitsu Klos&rsquo; <a href="http://wmc.3cdn.net/51113ed5df3e0d0b79_zzzm6go0b.pdf">The Status of Women in U.S. Media 2013</a>. If that&rsquo;s not proof enough, there&rsquo;s even more to show for it in <a href="https://www.nyfa.edu/film-school-blog/gender-inequality-in-film/">this study</a> conducted by the New York Film Academy. Those statistics are doubtlessly even worse for people of color and people who identify as non-straight. Representation and jobs in the industry for <a href="http://blog.leeandlow.com/2014/02/20/wheres-the-diversity-hollywood-85-years-of-the-academy-awards/">people of color</a>, <a href="https://mic.com/articles/84899/hollywood-s-problem-with-women-of-color-is-even-worse-than-you-realize#.H1WlUMYr5">women of color especially</a>, and <a href="http://variety.com/2013/biz/news/glaad-finds-inadequate-lgbt-representation-in-hollywood-1200582911/">GLBT people</a> is terribly low as well.</p>
+		
+		<p>While the virtual series world is better it could still stand to improve. EVPtv has a unique angle in which to tackle this particular issue: we&rsquo;re the only network to be run by an all-female admin team, some of who intersect with other minority groups. We are personally familiar with the attitudes that lead to these hugely uneven ratios and the lack of representation in media of all kinds. We want to create a network that is not only female positive, but also supportive of the racial and sexual minorities. We want this network to be a place where everyone, particularly the underrepresented, can hone their skills and perhaps become so interested in this endeavor that they decide to pursue it as a career. This is our effort to try and help change the dismal numbers and statistics mentioned above.</p> 
+		
+		<p>At EVPtv, we aim to produce content featuring characters covering a large range of genders, races and sexualities while challenging the negative stereotypes we see portrayed so often in media today. These are the issues we choose to highlight in hopes of sparking the desire to change this terribly imbalanced industry and we encourage anyone and everyone to contribute in helping us achieve this goal.</p>
+		</main>
+
+		<footer>
+			<div id="clockbox"></div>
+			<hr>
+			<p>&copy; Excelsior Virtual Productions (EVPtv) 2013-2017.<br>
+			All virtual shows and movies on EVPtv are completely fan-made. The likeness of actors/actresses represented are used for the reader's visualization of the characters portrayed in our scripts. <br><br><b>No profit is being made. No copyright infringement intended.</b> <br>All original characters and plots are the property of the show's writer/creator. <br>All publicly recognizable characters, stories, etc. are copyright of their respective owners. EVPtv is in no way associated with the owners of any copyrighted material. </p>
+		</footer>
+	</body>
+</html>

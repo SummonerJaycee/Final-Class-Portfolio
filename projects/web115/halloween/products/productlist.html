@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Halloween Store</title>
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/product.css">
+	<link rel="stylesheet" href="../styles/jquery-ui.min.css">
+	<link rel="stylesheet" href="../styles/jquery.bxslider.css">
+	
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/jquery.bxslider.min.js"></script>
+	<script src="printPage.js"></script>
+	
+<style>
+	table {
+		border-collapse: collapse;
+		margin: 10px auto;
+	}
+	
+	thead, tfoot {
+		font-weight: bold;
+		color: silver;
+		padding-bottom: 20px;
+		text-align: left;
+	}
+	
+	th, td {
+		text-align: left;
+		font-size: 13px;
+	}
+	
+	td:nth-child(2) {
+		text-align: left;
+	}
+	
+	td:first-child {
+		text-align: left;
+	}
+
+	.tdbold {
+		font-size: 13px;
+		font-weight:bold;
+		padding-right: 36px;
+		vertical-align: top;
+	}
+	
+	.tpadding {
+		padding-right: 30px;
+	}
+	
+	#tpaddingtop {
+		padding-top: 10px;
+	}
+	
+	tbody td:last-child {
+		background-color: #F5DEB3;
+		text-align: right;
+		padding: 5px;
+		font-size: 12px;
+	}
+	
+</style>
+
+<script>
+    	$(document).ready(function() {
+        	$("#slider").bxSlider({
+			  auto: true,
+			  autoControls: true,
+			  captions: true,
+			  autoHover: true,
+			  minSlides: 3,
+			  maxSlides: 3,
+			  slideWidth: 154,
+			  slideMargin: 10
+			});
+    	});
+		
+</script>
+	
+</head>
+
+<body>
+
+  <header>
+  	<img src="../images/pumpkin.gif" alt="Pumpkin" width="85">
+    <h2>The Halloween Store</h2>
+    <h3>For the little Goblin in all of us!</h3>
+  </header>
+  
+<nav id="nav_menu">
+		<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a class="current" href="products/productlist.html">Product List</a></li>
+		<li><a href="#">Personal</a></li>
+		<li><a href="#">Decorating Ideas</a>
+			<ul>
+			<li><a href="#">Outdoor</a></li>
+			<li><a href="#">Indoor</a></li>
+			<li><a href="#">Table</a></li>
+			<li><a href="#">Treats</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Join Email</a></li>
+		</ul>
+</nav>	
+  
+ 
+  
+  	<aside><div id="nav_menu_1">
+	    <ul>
+    	<li><a href="products/props.html">Props</a></li>
+    	<li><a href="products/costumes.html">Costumes</a></li>
+    	<li><a href="products/special.html">Special FX</a></li>
+    	<li><a href="products/masks.html">Masks</a></li><br><br>
+		<input type="button"  id="print"  onClick="javascript:window.print()" value="Print List">
+<script>
+/*document.getElementById("print").onclick = function() {myFunction()};
+
+function myFunction() {
+ // var printPage = function() {
+    window.print(); 
+}
+//window.onload = function() {
+//	$("print").onclick = printPage;
+//}*/
+</script>
+    </ul>
+
+	</div>
+	</aside>
+
+  <main>
+
+  <h1>Product List</h1>
+<table>
+	<thead>
+		<tr id="hdr_row_2">
+			<th>Category</th>
+			<th>Description</th>
+			<th style="text-align: right;">Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="5" class="tdbold" id="tpaddingtop">Props</td>
+			<td class="tpadding" id="tpaddingtop"><a href="products/cat.html">20" Deranged Cat</a></td>
+			<td id="tpaddingtop">$39.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/flyingbats.html">Flying bats</a></td>
+			<td>$14.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/uglyrat.html">16" Ugly rat</a></td>
+			<td>$14.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/uglierrat.html">20" Uglier rat</a></td>
+			<td>$19.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/plasticskeleton.html">Plastic skeleton</a></td>
+			<td>$12.50</td>
+		</tr>
+		<tr>
+			<td rowspan="3" class="tdbold">Costumes</td>
+			<td class="tpadding"><a href="products/powers.html">Austin Powers</a></td>
+			<td>$79.50</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/frankenstein.html">Frankenstein</a></td>
+			<td>$49.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/martian.html">Martian</a></td>
+			<td>$69.99</td>
+		</tr>
+		<tr>
+			<td rowspan="3" class="tdbold">Special Effects</td>
+			<td class="tpadding"><a href="products/fogmachine.html">Fog machine</a></td>
+			<td>$34.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/fogjuice.html">Fog juice</a></td>
+			<td>$9.99</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/ministrobe.html">Mini strobe light</a></td>
+			<td>$14.99</td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="tdbold">Masks</td>
+			<td class="tpadding"><a href="products/freddymask.html">Freddy</a></td>
+			<td>$44.50</td>
+		</tr>
+		<tr>
+			<td class="tpadding"><a href="products/vadermask.html">Darth Vader</a></td>
+			<td>$124.50</td>
+		</tr>
+	</tbody>
+</table>
+ </main>
+  
+<section>
+        <ul id="slider">
+            <li><img src="../images/cat1.jpg" alt="" title="Deranged Cat" style="min-width:154px;max-width:154px;min-height:150px;max-height:150px;"></li>
+            <li><img src="../images/flying_bats.jpg" alt="" title="Flying Bats" style="min-width:154px;max-width:154px;min-height:150px;max-height:150px;"></li>
+            <li><img src="../images/rat1.jpg" alt="" title="Ugly Rat" style="min-width:154px;max-width:154px;min-height:150px;max-height:150px;"></li>
+            <li><img src="../images/strobe1.jpg" alt="" title="Mini Strobe Light" style="min-width:154px;max-width:154px;min-height:150px;max-height:150px;"></li>
+        </ul>
+</section>
+	
+  <footer>
+	<p>&copy; 2016 Ben Murach</p>
+  </footer>
+</body>
+</html>
