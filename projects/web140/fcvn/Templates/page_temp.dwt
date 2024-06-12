@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>Mission Statement | FCVNtv.</title>
+    <!-- TemplateEndEditable -->
+    <meta charset="utf-8" />
+    <meta name="description" content="A virtual entertainment network for scripted original and fan fiction.">
+    <meta name="author" content="Full Circle Virtual Network">
+
+    <!-- Mobile Specific
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Icon Font
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+        crossorigin="anonymous">
+
+    <!-- Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Mobile SideNav -->
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+    <!-- Dropdown -->
+    <script>
+        $(document).ready(function () {
+            $(".dropdown-trigger").dropdown()
+        });
+    </script>
+
+
+    <!-- Image Slider -->
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({
+                indicators: false,
+                height: 600
+            });
+        });
+    </script>
+
+    <!-- Magical Underline by Wking @ CodePen.io -->
+    <script>
+        // VARIABLES
+        const magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
+
+        const gradientAPI = 'https://gist.githubusercontent.com/wking-io/3e116c0e5675c8bcad8b5a6dc6ca5344/raw/4e783ce3ad0bcd98811c6531e40256b8feeb8fc8/gradient.json';
+
+        // HELPER FUNCTIONS
+
+        // 1. Get random number in range. Used to get random index from array.
+        const randNumInRange = max => Math.floor(Math.random() * (max - 1));
+
+        // 2. Merge two separate array values at the same index to 
+        // be the same value in new array.
+        const mergeArrays = (arrOne, arrTwo) => arrOne
+            .map((item, i) => `${item} ${arrTwo[i]}`)
+            .join(', ');
+
+        // 3. Curried function to add a background to array of elms
+        const addBackground = (elms) => (color) => {
+            elms.forEach(el => {
+                el.style.backgroundImage = color;
+            });
+        }
+        // 4. Function to get data from API
+        const getData = async (url) => {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.data;
+        }
+
+        // 5. Partial Application of addBackground to always apply 
+        // background to the magicalUnderlines constant
+        const addBackgroundToUnderlines = addBackground(magicalUnderlines);
+
+        // GRADIENT FUNCTIONS
+
+        // 1. Build CSS formatted linear-gradient from API data
+        const buildGradient = (obj) => `linear-gradient(${obj.direction}, ${mergeArrays(obj.colors, obj.positions)})`;
+
+        // 2. Get single gradient from data pulled in array and
+        // apply single gradient to a callback function
+        const applyGradient = async (url, callback) => {
+            const data = await getData(url);
+            const gradient = buildGradient(data[randNumInRange(data.length)]);
+            callback(gradient);
+        }
+
+        // RESULT
+        applyGradient(gradientAPI, addBackgroundToUnderlines);
+    </script>
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+</head>
+
+
+<body>
+
+    <header>
+
+        <!-- NAVIGATION BAR -->
+
+        <div class="navbar-fixed"></div>
+
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="about.html">About</a></li>
+          <li class="divider"></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li class="divider"></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    
+        <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+              <img src="img/logo_land_white.png" class="responsive-img nav_logo" alt="FCVNtv Logo White">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a class="hvr-underline-from-left" href="/">Home</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-left" href="shows.html">Shows</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-left" href="minis.html">Minis</a>
+            </li>
+            <li>
+                <a class="hvr-underline-from-left" href="movies.html">Movies</a>
+            </li>
+              <li>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-left" href="/forum">Forum</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <ul class="sidenav" id="mobile-demo">
+          <li>
+              <a href="/">Home</a>
+          </li>
+          <li>
+              <a href="shows.html">Shows</a>
+          </li>
+          <li>
+              <a href="minis.html">Minis</a>
+          </li>
+          <li>
+              <a href="movies.html">Movies</a>
+          </li>
+          <li>
+              <a href="about.html">About</a>
+          </li>
+          <li>
+              <a href="faq.html">FAQ</a>
+          </li>
+          <li>
+              <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="/forum">Forum</a>
+          </li>
+        </ul>
+        </div>
+
+
+        <!-- IMAGE HEADER -->
+
+        <img src="img/about.jpg" class="responsive-img about-img" alt="Together, We Create.">
+
+    </header>
+
+    <main>
+
+        <!-- ABOUT US -->
+
+        <div class="section-statement">
+            <div class="container">
+                <div class="row">
+
+                    <h2 class="heading-primary center-align u-margin-bottom-med">Our Mission Statement</h2>
+                    <h3 class="heading-primary--small center-align u-margin-bottom-med">This is more than fiction.</h3>
+
+                    <div class="col s12">
+
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">
+                            We strive to create some of the most diverse and highest quality virtual media available and to foster a supportive platform
+                            for writers of all skill levels and backgrounds to showcase their works for eager readers’ pleasure.
+                            We aim to nurture a community that respects what makes each of us unique, understands social
+                            injustices in relation to media and representation, and that will provide constructive criticism
+                            and encouragement to all our members. We want to help transform entertainment media to be more
+                            inclusive of the under-represented and conscious of the diversity of the audience it reaches,
+                            one step at a time.</p>
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">
+                            At FCVNtv, our executive team is made up completely of women who also intersect with various other under-represented groups.
+                            This gives us a unique angle in which to do our part in tackling the very real issue that continues
+                            to plague our media:
+                            <strong>a lack of diversity and representation for minorities</strong>.</p>
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">
+                            As it stands, white heterosexual men still dominate our screens no matter what we’re watching: film, television, or a streaming
+                            service. According to the Women’s Media Center’s report,
+                            <a href="http://www.womensmediacenter.com/assets/site/reports/10c550d19ef9f3688f_mlbres2jd.pdf" target="_blank" class="statement-link underline--magical">"The Status Of Women in the U.S. Media 2017"</a>, only 33.5% of named or speaking characters
+                            were women, only 26.3% were people of colors and in a study of 4,370 speaking characters in the
+                            top 800 movies from 2007 to 2015, only 32 of them identified as LGBT.</p>
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">
+                            It’s also important to note that the diversity and representation issues don’t end on screen. In the San Diego State University’s
+                            Center for the Study of Women in Television and Film’s
+                            <a href="https://womenintvfilm.sdsu.edu/wp-content/uploads/2017/01/2016_Celluloid_Ceiling_Report.pdf" target="_blank" class="statement-link underline--magical">"The Celluloid Ceiling"</a> study, it was found that in the to 250 films of 2015-2016, we learn
+                            that behind-the-scenes is even more abysmal. Of all the directors, writers, producers, executive
+                            producers, editors, and cinematographers on those films, only a pitiful 17% were women. A study
+                            by the Directors Guild of America,
+                            <a href="https://www.dga.org/News/PressReleases/2015/151209-DGA-Publishes-Inaugural-Feature-Film-Diversity-Report.aspx" target="_blank"
+                                class="statement-link underline--magical">"Feature Film Diversity Report"</a>, found that in the feature films opening in 2013 and 2014,
+                            12.5% of directors were people of color, only 1.3% of which were women. In 2015, a mere 5.3%
+                            of writers for theatrical films were people of color. </p>
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">
+                            The need for change is glaringly obvious and the fight to bring more diversity to media of all kinds is an ongoing one. It's
+                            important that we, whether we write for fun or we write as potential, aspiring screenwriters
+                            of film and television, acknowledge our importance in contributing to the movement.</p>
+
+                        <p class="normal-para flow-text center-align u-margin-bottom-med">We push for our content to embody these goals in any way that we can and we hope that you will join
+                            us. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col s12 m6">
+
+                    <h3 class="heading-tertiary center-align">DISCLAIMER</h3>
+
+                    <p class="footer__text-box center-align">
+                        All virtual shows, movies, etc. on FCVNtv are completely fan-made. The likeness of actors/actresses represented are simply
+                        used for the reader's visualization of the characters portrayed in our scripts.
+
+                        <br>
+                        <br> All original characters and plots are the property of the show's writer/creator. All publicly recognizable
+                        characters, stories, etc. are copyright of their respective owners. We are in no way associated with
+                        the owners of any copyrighted material.
+                    </p>
+
+                </div>
+
+                <div class="col s12 m6">
+
+                    <h3 class="heading-tertiary center-align">CONNECT WITH US</h3>
+
+                    <p class="footer__text-box center-align">
+                        <a href="http://twitter.com/FCVNtv" class="footer__link">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                        <a href="http://fcvntv.tumblr.com" class="footer__link">
+                            <i class="fab fa-tumblr-square"></i>
+                        </a>
+                        <a href="mailto:hello@fullcirclevn.com" class="footer__link">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+
+                        <br>
+                        <br> &copy; 2018 FCVNtv.
+                        <br>
+                        <strong>No profit is being made. No copyright infringement intended.</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- More Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" src="js/materialize.js"></script>
+
+
+</body>
+
+
+</html>
